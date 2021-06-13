@@ -9,10 +9,8 @@ const db = knex({
   // Enter your own database information here based on what you created
   client: 'pg',
   connection: {
-    host : '(postgresql-asymmetrical-90369',
-    user : 'postgres',
-    password : '',
-    database : 'smartbrain'
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
   }
 });
 
@@ -22,7 +20,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 app.get('/', (req, res)=> {
-  res.send('it is working');
+  res.send(db.users);
 })
 
 app.post('/signin', (req, res) => {
