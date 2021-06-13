@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "serve -s build"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,7 @@
     "pg": "^8.3.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "serve": "^9.4.0"
   },
   "description": ""
 }
