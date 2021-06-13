@@ -8,10 +8,8 @@ const db = knex({
   // Enter your own database information here based on what you created
   client: 'pg',
   connection: {
-    host : 'postgresql-pointy-00543',
-    user : 'postgres',
-    password : 'Mrunal_123',
-    database : 'smartbrain'
+   connectionString: process.env.DATABASE_URL,
+   ssl: true,
   }
 });
 
